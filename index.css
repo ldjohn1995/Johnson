@@ -1,0 +1,120 @@
+
+html{
+    font-size: 15px;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    height: 100vh;
+    margin:0;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 60px;
+    height: 100%;
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px;
+    background-color: #696969 ;
+}
+.aside{
+    position: fixed;
+    transition:  300ms;
+    transform: translate(-300px);
+    width:300px;
+    background-color: #dcdcdc;
+    height: 100%;
+
+    }
+.aside.open{
+    width:100%;
+        transform: translate(0);
+    }
+.brand a {
+color: #ffffff;
+font-size: 25px;
+font-weight: bold;
+text-decoration: none;
+}
+.menu-button{
+    border:none;
+    padding:5px;
+    background: none;
+    color:#ffffff;
+    font-size:25px; 
+    cursor: pointer;
+    }
+.aside > button{
+    background-color:#dcdcdc;
+}
+.sidebar-close-button{
+    margin: 5px;
+    border:none;
+    font-size: 30px;
+    position: absolute;
+    right:10px;
+    top: 10px;
+}
+.aside a{
+    text-decoration: none;
+    color: #000000;
+    font-family: Jazz LET;
+    font-size: 25px;
+
+}
+.aside a:hover{
+
+text-decoration: underline;
+}
+.aside li{
+ list-style: none;
+ content: '>';
+
+left:680px;
+bottom:75px;
+    /* border: 1px #000000 solid; */
+}
+.aside > h4{
+text-align: center;
+}
+/* .arrow{
+position: absolute;
+right:60px;
+top: 80px;
+font-size: 30px;
+<span class="arrow">&#8250;</span>
+} */
+/* .aside ul li::after{
+content: '>';
+position: relative;
+left:680px;
+bottom:75px;
+
+} */
+.join-link a{
+text-decoration: none;
+padding:5px;
+color:#ffffff;
+}
+.join-link a:hover{
+    color:#000;
+}
+.main{
+    grid-area: main;
+    border: 1px #f0f0f0 solid ;
+}
+.footer{
+    grid-area: footer;
+    display:flex;
+    justify-content: center;
+    background-color: #696969 ;
+    color: #000000;
+}
+/* mobile phone layout */
